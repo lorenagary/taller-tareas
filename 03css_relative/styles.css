@@ -1,0 +1,31 @@
+body {
+    background-color: yellow;
+  }
+  
+  .padre{
+    display: inline-block;
+    width: 500px;
+    height: 500px;
+    margin: 3em 3em;
+    border: 2px dashed rgb(230, 18, 18);
+  }
+  .nuevo{
+    background-color: blue;
+  }
+  
+  div {
+    padding: 30px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .hijo1 {
+    position: relative;
+    top: 20px;
+    background-color: greenyellow;
+  }
+  .hijo2{
+    position: relative;
+    top: 20px;
+    background-color: orangered;
+  }
