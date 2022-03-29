@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+}
+.slider {
+    height: 200px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(255, 81, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav {
+    position: sticky;
+    top: 0;
+    margin-top: 10px;
+    height: 50px;
+    padding: 15px;
+    background-color: yellowgreen;
+  }
+  
+  .nav ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .nav ul li {
+    line-height: 3;
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  article {
+    padding: 15px;
+    line-height: 1.6;
+  }
+  .title{
+      text-align: center;
+  }
