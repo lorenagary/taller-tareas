@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .calculadora {
+      background-color: blueviolet;
+      width: 500px;
+      height: 500px;
+      padding: 10px 10px 5px 5px;
+      border-radius: 5%;
+    }
+
+    /* .contenedor-pantalla {
+      width: 470px;
+      height: 50px;
+      background-color: antiquewhite;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    } */
+
+    .btn-limpiar {
+      width: 470px;
+      height: 30px;
+      margin: 0 auto;
+      display: block;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .botones {
+      /* background-color: aquamarine; */
+      width: 470px;
+      margin: 0 auto;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .boton {
+      width: 90px;
+      height: 90px;
+      margin: 0px 8px 10px 8px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .pantalla {
+      width: 100%;
+
+      display: block;
+      width: 463px;
+      height: 40px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>Calculadora</h1>
+    <div class="calculadora">
+      <!-- pantalla -->
+      <div class="contenedor-pantalla">
+        <input type="text" class="pantalla" id="pantalla" placeholder="Ingrese datos ..." readonly>
+      </div>
+      <button class="btn-limpiar" onclick="limpiar()">Limpiar</button>
+      <div class="botones">
+        <button class="boton" id="button_7" onclick="escribir('7')">7</button>
+        <button class="boton" id="button_8" onclick="escribir('8')">8</button>
+        <button class="boton" id="button_9" onclick="escribir('9')">9</button>
+        <button class="boton" id="button_dividir" onclick="escribir('/')">÷</button>
+        <button class="boton" id="button_4" onclick="escribir('4')">4</button>
+        <button class="boton" id="button_5" onclick="escribir('5')">5</button>
+        <button class="boton" id="button_6" onclick="escribir('6')">6</button>
+        <button class="boton" id="button_multiplicar" onclick="escribir('*')">x</button>
+        <button class="boton" id="button_1" onclick="escribir('1')">1</button>
+        <button class="boton" id="button_2" onclick="escribir('2')">2</button>
+        <button class="boton" id="button_3" onclick="escribir('3')">3</button>
+        <button class="boton" id="button_restar" onclick="escribir('-')">-</button>
+        <button class="boton" id="button_0" onclick="escribir('0')">0</button>
+        <button class="boton" id="button_punto" onclick="escribir('.')">.</button>
+        <button class="boton" id="button_igual" onclick="escribir('=')">=</button>
+        <button class="boton" id="button_adicionar" onclick="escribir('+')">+</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function limpiar(){
+      var pantalla = document.getElementById('pantalla')
+      pantalla.setAttribute('value', '')
+    }
+
+    function escribir(simbolo) {
+      var pantalla = document.getElementById('pantalla');
+      var calcular = pantalla.getAttribute('value');
+      if (calcular == null) {
+        calcular = '';
+      }
+      if (simbolo == '='){
+        pantalla.setAttribute('value', evaluar(calcular));
+      } else {
+        calcular = calcular + simbolo;
+        pantalla.setAttribute('value', calcular);
+      }
+    }
+
+    function evaluar(fn) {
+      return new Function('return ' + fn)();
+    }
+  </script>
+</body>
+
+</html>

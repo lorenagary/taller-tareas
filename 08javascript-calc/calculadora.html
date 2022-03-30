@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./calculadora.css">
+</head>
+
+<body>
+  <div>
+    <h1>Calculadora</h1>
+    <div class="calculadora">
+      <div class="contenedor-pantalla">
+        <div class="pantalla">
+          <input type="text" id="pantalla" placeholder="Ingresar Valores" readonly>
+        </div>
+        <div class="limpiar">
+          <button class="btn-limpiar" onclick="limpiar()">Limpiar</button>
+        </div>
+      </div>
+      <div class="botones" id="botones">
+        <button class="boton" onclick="escribir('7')">7</button>
+        <button class="boton" onclick="escribir('8')">8</button>
+        <button class="boton" onclick="escribir('9')">9</button>
+        <button class="boton" onclick="escribir('/')">÷</button>
+        <button class="boton" onclick="escribir('4')">4</button>
+        <button class="boton" onclick="escribir('5')">5</button>
+        <button class="boton" onclick="escribir('6')">6</button>
+        <button class="boton" onclick="escribir('*')">*</button>
+        <button class="boton" onclick="escribir('1')">1</button>
+        <button class="boton" onclick="escribir('2')">2</button>
+        <button class="boton" onclick="escribir('3')">3</button>
+        <button class="boton" onclick="escribir('-')">-</button>
+        <button class="boton" onclick="escribir('0')">0</button>
+        <button class="boton" onclick="escribir('.')">.</button>
+        <button class="boton" onclick="calcular()">=</button>
+        <button class="boton" onclick="escribir('+')">+</button>
+      </div>
+    </div>
+  </div>
+  <script src="./calculadora.js"></script>
+</body>
+
+</html>
